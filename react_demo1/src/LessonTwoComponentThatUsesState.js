@@ -4,7 +4,7 @@ function LessonTwoComponentThatUsesState() {
     var [currentNumber, setCurrentNumber] = React.useState(50);
 
     const clickResponse = () => {
-        // ++currentNumber; // This will not work! Don't do it!
+        // ++currentNumber; // This does not trigger re-render. Use the setCurrentNumber instead!
         setCurrentNumber(currentNumber + 1);
     }
 
@@ -12,10 +12,9 @@ function LessonTwoComponentThatUsesState() {
         <div>
             <b>{currentNumber}</b>
             <button onClick={clickResponse}>
-                Increment me!
+                Increment
             </button>
         </div>
-        
     );
 }
 
